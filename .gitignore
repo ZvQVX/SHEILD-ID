@@ -1,0 +1,35 @@
+# Secrets & local lab config (copy run-local.example.ps1 → run-local.ps1)
+run-local.ps1
+.env
+.env.*
+
+# Cryptographic material & audit data
+shield.key
+security_audit.enc
+security_audit.log
+*.pem
+*.key
+*.crt
+*.pfx
+temp_cert.pfx
+
+# ML artifacts (optional local models)
+biometric_rf_model.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node / frontend build
+she/node_modules/
+she/dist/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sw?

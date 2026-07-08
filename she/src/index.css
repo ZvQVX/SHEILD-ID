@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Geist+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 2%;
+    --foreground: 0 0% 95%;
+    --card: 240 6% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 6% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 135 100% 50%;
+    --primary-foreground: 240 10% 2%;
+    --secondary: 240 5% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 240 5% 12%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 135 100% 50%;
+    --radius: 0.75rem;
+
+    --surface: 240 6% 7%;
+    --status-verified: 135 100% 50%;
+    --status-alert: 0 100% 60%;
+    --alert-bg: 0 80% 5%;
+
+    --sidebar-background: 240 10% 2%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 135 100% 50%;
+    --sidebar-primary-foreground: 240 10% 2%;
+    --sidebar-accent: 240 5% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 5% 15%;
+    --sidebar-ring: 135 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist Sans', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .glow-green {
+    box-shadow: 0 0 8px hsl(var(--status-verified));
+  }
+  .glow-red {
+    box-shadow: 0 0 12px hsl(var(--status-alert));
+  }
+  .surface-card {
+    @apply bg-card rounded-xl;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.05);
+  }
+}
